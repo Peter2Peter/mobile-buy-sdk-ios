@@ -189,7 +189,7 @@ extension Graph {
             request.httpShouldHandleCookies = false
 
             request.setValue("application/json",       forHTTPHeaderField: Header.accept)
-            request.setValue("application/graphql",    forHTTPHeaderField: Header.contentType)
+            request.setValue("application/graphql; charset=utf-8",    forHTTPHeaderField: Header.contentType)
             request.setValue(SHA256.hash(requestData), forHTTPHeaderField: Header.queryTag)
 
             for (name, value) in self.headers {
